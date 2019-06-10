@@ -34,7 +34,7 @@ class BotInvite(Cog):
 
             color=discord.Color.blue(),
 
-            description="The invite link for the bot is: https://discordapp.com/api/oauth2/authorize?client_id={bot.user.id}&permissions=268443792&scope=bot",
+            description="The invite link for the bot is: https://discordapp.com/api/oauth2/authorize?client_id={return bot.user.id}&permissions=268443792&scope=bot",
 
         )
 
