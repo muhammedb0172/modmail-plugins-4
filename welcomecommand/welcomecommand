@@ -26,7 +26,7 @@ class Welcome(Cog):
 
     async def information(self, ctx):
 
-        """Invite this bot, useful for communities that spread over many servers."""
+        """Say welcome"""
 
         embed = discord.Embed(
 
