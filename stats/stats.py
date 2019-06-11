@@ -65,7 +65,7 @@ class Stats(commands.Cog):
 
         )
         embed.add_field(name=f"Member Count",value=f"There Are {ctx.guild.member_count} Members In {ctx.guild.name}")
-        embed.add_field(name="Guild ID",value=f"`{ctx.guild.id}` Is The ID For {ctx.guild.name}")
+        embed.add_field(name="Guild ID",value=f"The ID For {ctx.guild.name} is `{ctx.guild.id}`")
         embed.add_field(name=f"COMING SOON",value=f"COMING SOON")
         embed.add_field(name=f"COMING SOON",value=f"COMING SOON")
         embed.add_field(name=f"Important Information",value=f"Remember To :star: The [Repo](https://github.com/kyb3r/modmail) And Become A Patreon [Here](https://patreon.com/kyber)")
