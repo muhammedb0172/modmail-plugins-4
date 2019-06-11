@@ -42,7 +42,7 @@ class BotStats(commands.Cog):
         embed.add_field(name=f"Bot Prefix",value=f"The Prefix For {self.bot.user.name} Is `{self.bot.prefix}` Or {self.bot.user.mention}")
         embed.add_field(name=f"Latency",value=f"The Latency For {self.bot.user.name} Is {self.bot.latency * 1000:.2f} MilliSeconds / {self.bot.latency:.3f} Seconds")
         embed.set_thumbnail(url=str(self.bot.user.avatar_url))
-        embed.set_footer(text="Remember To :star: The [Repo](https://github.com/kyb3r/modmail) And Become A Patreon [Here](https://patreon.com/kyber) ")
+        embed.set_footer(text=f"Remember To :star: The [Repo](https://github.com/kyb3r/modmail) And Become A Patreon [Here](https://patreon.com/kyber) ")
 
         await ctx.send(embed=embed)
 
