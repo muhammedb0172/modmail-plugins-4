@@ -70,7 +70,7 @@ class BotStats(commands.Cog):
         embed.add_field(name=f"COMING SOON",value=f"The Latency For {self.bot.user.name} Is {self.bot.latency * 1000:.2f} MilliSeconds / {self.bot.latency:.3f} Seconds")
         embed.add_field(name=f"Important Information",value=f"Remember To :star: The [Repo](https://github.com/kyb3r/modmail) And Become A Patreon [Here](https://patreon.com/kyber)")
         embed.set_thumbnail(url=str(url=str(ctx.guild.icon_url))
-        embed.set_footer(text=f"Stats missing? DM MiTonder#1792 with the suggestion.")
+        embed.set_footer(text="Stats missing? DM MiTonder#1792 with the suggestion.")
         embed.set_author(name=f"{guild.name} Stats")
 
         await ctx.send(embed=embed)
