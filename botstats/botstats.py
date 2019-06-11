@@ -39,7 +39,7 @@ class BotStats(commands.Cog):
         )
         embed.add_field(name=f"Invite link for {self.bot.user.name}",value=f"[Here](https://discordapp.com/api/oauth2/authorize?client_id={self.bot.user.id}&permissions=268443792&scope=bot) is the invite link for your bot.")
         embed.add_field(name="Bot User ID",value=f"`{self.bot.user.id}` is the user id for {self.bot.user.name}")
-        embed.add_field(name=f"Bot Prefix",value=f"The Prefix For {self.bot.user.name} is {self.Bot.get_prefix}")
+        embed.add_field(name=f"Bot Prefix",value=f"The Prefix For {self.bot.user.name} is {self.bot.get_prefix}")
 
         embed.set_thumbnail(url=str(self.bot.user.avatar_url))
 
