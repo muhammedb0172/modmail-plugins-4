@@ -10,7 +10,7 @@ from core.models import PermissionLevel
 
 class BotStats(commands.Cog):
 
-    """Get Stats about your ModMail bot"""
+    """Get  Useful Stats About Your ModMail Bot"""
 
     
 
@@ -26,7 +26,7 @@ class BotStats(commands.Cog):
 
     async def stats(self, ctx):
 
-        """Get a neat embed with many useful stats for your bot."""
+        """Get A Neat Embed With Many Useful Stats About Your ModMail Bot."""
 
         embed = discord.Embed(
 
@@ -34,12 +34,12 @@ class BotStats(commands.Cog):
 
             color=discord.Color.blue(),
 
-            description=f"Here is the stats for {self.bot.user.name}, enjoy them.\n",
+            description=f"Here is the stats for {self.bot.user.name}, enjoy them.",
 
         )
-        embed.add_field(name=f"Invite link for {self.bot.user.name}",value=f"[Here](https://discordapp.com/api/oauth2/authorize?client_id={self.bot.user.id}&permissions=268443792&scope=bot) is the invite link for your bot.")
-        embed.add_field(name="Bot User ID",value=f"`{self.bot.user.id}` is the user id for {self.bot.user.name}")
-        embed.add_field(name=f"Bot Prefix",value=f"The Prefix For {self.bot.user.name} is `{self.bot.prefix}` or {self.bot.user.mention}")
+        embed.add_field(name=f"Invite Link For {self.bot.user.name}",value=f"[Here](https://discordapp.com/api/oauth2/authorize?client_id={self.bot.user.id}&permissions=268443792&scope=bot) Is The Invite Link For {self.bot.user.name}.")
+        embed.add_field(name="Bot User ID",value=f"`{self.bot.user.id}` Is The User ID For {self.bot.user.name}")
+        embed.add_field(name=f"Bot Prefix",value=f"The Prefix For {self.bot.user.name} Is `{self.bot.prefix}` Or {self.bot.user.mention}")
         embed.add_field(name=f"Latency",value=f"The Latency For {self.bot.user.name} Is {self.bot.latency * 1000:.2f} ms")
         embed.set_thumbnail(url=str(self.bot.user.avatar_url))
 
