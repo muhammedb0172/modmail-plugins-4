@@ -64,7 +64,7 @@ class Stats(commands.Cog):
             description=f"**Here is the stats for {ctx.guild.name}, enjoy them:**",
 
         )
-        embed.add_field(name=f"Member Count",value=f"There Are {ctx.guild.member.count} Members In {ctx.guild.name}")
+        embed.add_field(name=f"Member Count",value=f"There Are {guild.member.count} Members In {ctx.guild.name}")
         embed.add_field(name="Guild ID",value=f"`{ctx.guild.id}` Is The ID For {ctx.guild.name}")
         embed.add_field(name=f"COMING SOON",value=f"COMING SOON")
         embed.add_field(name=f"COMING SOON",value=f"COMING SOON")
