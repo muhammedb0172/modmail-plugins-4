@@ -30,11 +30,11 @@ class BotStats(commands.Cog):
 
         embed = discord.Embed(
 
-            title="Stats",
+            title="",
 
             color=discord.Color.blue(),
 
-            description=f"Here is the stats for {self.bot.user.name}, enjoy them.",
+            description=f"**Here is the stats for {self.bot.user.name}, enjoy them.**",
 
         )
         embed.add_field(name=f"Invite Link For {self.bot.user.name}",value=f"[Here](https://discordapp.com/api/oauth2/authorize?client_id={self.bot.user.id}&permissions=268443792&scope=bot) Is The Invite Link For {self.bot.user.name}.")
@@ -44,6 +44,7 @@ class BotStats(commands.Cog):
         embed.add_field(name=f"Important Information",value=f"Remember To :star: The [Repo](https://github.com/kyb3r/modmail) And Become A Patreon [Here](https://patreon.com/kyber)")
         embed.set_thumbnail(url=str(self.bot.user.avatar_url))
         embed.set_footer(text=f"Footer Text")
+        embed.set_author(name="Bot Stats")
 
         await ctx.send(embed=embed)
 
