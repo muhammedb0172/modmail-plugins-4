@@ -104,7 +104,7 @@ class Stats(commands.Cog):
 
         await ctx.send(embed=embed)
         
-                embed = discord.Embed(
+        embed = discord.Embed(
 
             title=" ",
 
