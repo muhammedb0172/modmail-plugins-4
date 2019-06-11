@@ -51,7 +51,7 @@ class BotStats(commands.Cog):
 
     @checks.has_permissions(PermissionLevel.ADMINISTRATOR)
 
-    async def serverstatsstats(self, ctx):
+    async def serverstats(self, ctx):
 
         """Get A Neat Embed With Many Useful Stats About Your Server"""
 
@@ -61,17 +61,17 @@ class BotStats(commands.Cog):
 
             color=discord.Color.blue(),
 
-            description=f"**Here is the stats for {guild.name}, enjoy them:**",
+            description=f"**Here is the stats for {Guild.name}, enjoy them:**",
 
         )
-        embed.add_field(name=f"Member Count",value=f"There Are {guild.member.count} Members In {guild.name}")
-        embed.add_field(name="Guild ID",value=f"`{guild.id}` Is The ID For {guild.name}")
+        embed.add_field(name=f"Member Count",value=f"There Are {Guild.member.count} Members In {Guild.name}")
+        embed.add_field(name="Guild ID",value=f"`{Guild.id}` Is The ID For {Guild.name}")
         embed.add_field(name=f"COMING SOON",value=f"The Prefix For {self.bot.user.name} Is `{self.bot.prefix}` Or {self.bot.user.mention}")
         embed.add_field(name=f"COMING SOON",value=f"The Latency For {self.bot.user.name} Is {self.bot.latency * 1000:.2f} MilliSeconds / {self.bot.latency:.3f} Seconds")
         embed.add_field(name=f"Important Information",value=f"Remember To :star: The [Repo](https://github.com/kyb3r/modmail) And Become A Patreon [Here](https://patreon.com/kyber)")
         embed.set_thumbnail(url=str(ctx.guild.icon_url))
         embed.set_footer(text=f"Stats missing? DM MiTonder#1792 with a suggestion for new stats")
-        embed.set_author(name=f"{guild.name} Stats")
+        embed.set_author(name=f"{Guild.name} Stats")
 
         await ctx.send(embed=embed)
         
