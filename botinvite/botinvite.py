@@ -17,7 +17,6 @@ class BotInvite(Cog):
     def init(self, bot):
 
         self.bot = bot
-        id = self.bot.user.id
 
     
 
@@ -31,11 +30,11 @@ class BotInvite(Cog):
 
         embed = discord.Embed(
 
-            title="Information",
+            title="Bot Invite Link",
 
             color=discord.Color.blue(),
 
-            description="The invite link for the bot is: https://discordapp.com/api/oauth2/authorize?client_id=(id)&permissions=268443792&scope=bot",
+            description="The invite link for the bot is: https://discordapp.com/api/oauth2/authorize?client_id=self.bot.user.id&permissions=268443792&scope=bot",
 
         )
 
