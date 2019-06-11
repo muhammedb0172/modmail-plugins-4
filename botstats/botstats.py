@@ -37,7 +37,7 @@ class BotInvite(commands.Cog):
             description=f"The invite link for the bot is [here](https://discordapp.com/api/oauth2/authorize?client_id={self.bot.user.id}&permissions=268443792&scope=bot)",
 
         )
-        embed.add_field(name="Links",value=f"{self.bot.user.id")
+        embed.add_field(name="Links",value=f"{self.bot.user.id}")
         embed.set_thumbnail(url=str(self.bot.user.avatar_url))
 
         await ctx.send(embed=embed)
