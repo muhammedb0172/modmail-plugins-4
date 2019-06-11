@@ -17,9 +17,6 @@ class BotStats(commands.Cog):
     def __init__(self, bot):
 
         self.bot = bot
-
-    
-
     @commands.command()
 
     @checks.has_permissions(PermissionLevel.ADMINISTRATOR)
@@ -27,6 +24,31 @@ class BotStats(commands.Cog):
     async def stats(self, ctx):
 
         """Get A Neat Embed With Many Useful Stats About Your ModMail Bot."""
+
+        embed = discord.Embed(
+
+            title=" ",
+
+            color=discord.Color.blue(),
+
+            description=f"**GET STATS**",
+
+        )
+        embed.set_thumbnail(url=str(self.bot.user.avatar_url))
+        embed.set_footer(text=f"Anything missing? DM MiTonder#1792 with the suggestion.")
+        embed.set_author(name=f"{self.bot.user.name} Stats")
+
+        await ctx.send(embed=embed)
+
+    
+
+    @stats.command()
+
+    @checks.has_permissions(PermissionLevel.ADMINISTRATOR)
+
+    async def bot(self, ctx):
+
+        """Get A Neat Embed With Many Useful Stats About The ModMail Bot."""
 
         embed = discord.Embed(
 
