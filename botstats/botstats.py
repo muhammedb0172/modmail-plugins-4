@@ -30,7 +30,7 @@ class BotStats(commands.Cog):
 
         embed = discord.Embed(
 
-            title="",
+            title=" ",
 
             color=discord.Color.blue(),
 
@@ -44,7 +44,7 @@ class BotStats(commands.Cog):
         embed.add_field(name=f"Important Information",value=f"Remember To :star: The [Repo](https://github.com/kyb3r/modmail) And Become A Patreon [Here](https://patreon.com/kyber)")
         embed.set_thumbnail(url=str(self.bot.user.avatar_url))
         embed.set_footer(text=f"Footer Text")
-        embed.set_author(name="Bot Stats")
+        embed.set_author(name=f"{self.bot.user.name} Stats")
 
         await ctx.send(embed=embed)
 
