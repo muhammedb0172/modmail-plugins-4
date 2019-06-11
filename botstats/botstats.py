@@ -34,8 +34,7 @@ class BotStats(commands.Cog):
 
             color=discord.Color.blue(),
 
-            description=f"**Here is the stats for {self.bot.user.name}, enjoy them:
-            **",
+            description=f"**Here is the stats for {self.bot.user.name}, enjoy them:**",
 
         )
         embed.add_field(name=f"Invite Link For {self.bot.user.name}",value=f"[Here](https://discordapp.com/api/oauth2/authorize?client_id={self.bot.user.id}&permissions=268443792&scope=bot) Is The Invite Link For {self.bot.user.name}.")
