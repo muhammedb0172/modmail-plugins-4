@@ -42,9 +42,6 @@ class BotStats(commands.Cog):
         embed.set_thumbnail(url=str(self.bot.user.avatar_url))
 
         await ctx.send(embed=embed)
-        embed.set_thumbnail(url=str(self.bot.user.avatar_url))
-
-        await ctx.send(embed=embed)
 
 def setup(bot):
 
