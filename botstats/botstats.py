@@ -34,7 +34,7 @@ class BotInvite(commands.Cog):
 
             color=discord.Color.blue(),
 
-            description=f"Here is the stats for {self.bot.user.name}, enjoy them.",
+            description=f"Here is the stats for {self.bot.user.name}, enjoy them.\n",
 
         )
         embed.add_field(name="Invite link for the bot",value=f"[Here](https://discordapp.com/api/oauth2/authorize?client_id={self.bot.user.id}&permissions=268443792&scope=bot) is the invite link for your bot.")
