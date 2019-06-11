@@ -30,7 +30,7 @@ class BotInvite(commands.Cog):
 
         embed = discord.Embed(
 
-            title="Bot Invite Link",
+            title="Bot Stats",
 
             color=discord.Color.blue(),
 
