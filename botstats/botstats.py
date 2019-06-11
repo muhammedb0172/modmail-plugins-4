@@ -10,7 +10,7 @@ from core.models import PermissionLevel
 
 class BotInvite(commands.Cog):
 
-    """Invite your ModMail bot"""
+    """Get Stats about your ModMail bot"""
 
     
 
@@ -24,20 +24,20 @@ class BotInvite(commands.Cog):
 
     @checks.has_permissions(PermissionLevel.ADMINISTRATOR)
 
-    async def invite(self, ctx):
+    async def stats(self, ctx):
 
-        """Invite this bot, useful for communities that spread over many servers."""
+        """Get a neat embed with many useful stats for your bot."""
 
         embed = discord.Embed(
 
-            title="Bot Stats",
+            title="Stats",
 
             color=discord.Color.blue(),
 
-            description=f"The invite link for the bot is [here](https://discordapp.com/api/oauth2/authorize?client_id={self.bot.user.id}&permissions=268443792&scope=bot)",
+            description=f"Here is the stats for {self.bot.user.name}, enjoy them.",
 
         )
-        embed.add_field(name="Links",value=f"{self.bot.user.id}")
+        embed.add_field(name="Invite link for the bot",value=f"[Here](https://discordapp.com/api/oauth2/authorize?client_id={self.bot.user.id}&permissions=268443792&scope=bot) is the invite link for your bot.")
         embed.set_thumbnail(url=str(self.bot.user.avatar_url))
 
         await ctx.send(embed=embed)
