@@ -38,7 +38,7 @@ class BotInvite(commands.Cog):
 
         )
 
-        embed.set_thumbnail(url=str(ctx.guild.icon_url)
+        embed.set_thumbnail(url=str(ctx.guild.icon_url))
 
         await ctx.send(embed=embed)
 
