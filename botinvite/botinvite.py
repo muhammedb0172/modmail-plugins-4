@@ -6,9 +6,9 @@ from core import checks
 
 from core.models import PermissionLevel
 
-Cog = getattr(commands, 'Cog', object)
+#Cog = getattr(commands, 'Cog', object)
 
-class BotInvite(Cog):
+class BotInvite(commands.Cog):
 
     """Invite your ModMail bot"""
 
@@ -34,7 +34,7 @@ class BotInvite(Cog):
 
             color=discord.Color.blue(),
 
-            description=f"The invite link for the bot is: https://discordapp.com/api/oauth2/authorize?client_id=self.bot.user.id&permissions=268443792&scope=bot",
+            description=f"The invite link for the bot is: https://discordapp.com/api/oauth2/authorize?client_id={self.bot.user.id}&permissions=268443792&scope=bot",
 
         )
 
