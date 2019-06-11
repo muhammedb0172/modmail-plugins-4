@@ -75,13 +75,14 @@ class Stats(commands.Cog):
 
         await ctx.send(embed=embed)
         
+        
          @commands.command()
 
     @checks.has_permissions(PermissionLevel.ADMINISTRATOR)
 
-    async def serverstats(self, ctx):
+    async def allstats(self, ctx):
 
-        """Get A Neat Embed With Many Useful Stats About Your Server"""
+        """Sends 2 Embeds, Both `{prefix}serverstats` And `{prefix}botstats`"""
 
         embed = discord.Embed(
 
