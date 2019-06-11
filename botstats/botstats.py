@@ -8,7 +8,7 @@ from core.models import PermissionLevel
 
 #Cog = getattr(commands, 'Cog', object)
 
-class BotInvite(commands.Cog):
+class BotStats(commands.Cog):
 
     """Get Stats about your ModMail bot"""
 
@@ -42,15 +42,10 @@ class BotInvite(commands.Cog):
         embed.set_thumbnail(url=str(self.bot.user.avatar_url))
 
         await ctx.send(embed=embed)
-
-def setup(bot):
-
-    bot.add_cog(BotInvite(bot))
-
         embed.set_thumbnail(url=str(self.bot.user.avatar_url))
 
         await ctx.send(embed=embed)
 
 def setup(bot):
 
-    bot.add_cog(BotInvite(bot))
+    bot.add_cog(BotStats(bot))
