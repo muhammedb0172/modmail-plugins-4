@@ -64,14 +64,14 @@ class Stats(commands.Cog):
             description=f"**Here is the stats for {ctx.guild.name}, enjoy them:**",
 
         )
-        embed.add_field(name=f"Member Count",value=f"There Are {guild.member.count} Members In {ctx.guild.name}")
+        embed.add_field(name=f"Member Count",value=f"There Are {ctx.guild.member.count} Members In {ctx.guild.name}")
         embed.add_field(name="Guild ID",value=f"`{ctx.guild.id}` Is The ID For {ctx.guild.name}")
         embed.add_field(name=f"COMING SOON",value=f"COMING SOON")
         embed.add_field(name=f"COMING SOON",value=f"COMING SOON")
         embed.add_field(name=f"Important Information",value=f"Remember To :star: The [Repo](https://github.com/kyb3r/modmail) And Become A Patreon [Here](https://patreon.com/kyber)")
         embed.set_thumbnail(url=str(ctx.guild.icon_url))
         embed.set_footer(text=f"Stats missing? DM MiTonder#1792 with a suggestion for new stats")
-        embed.set_author(name=f"{ctx.Guild.name} Stats")
+        embed.set_author(name=f"{ctx.guild.name} Stats")
 
         await ctx.send(embed=embed)
         
