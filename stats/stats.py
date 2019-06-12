@@ -116,7 +116,23 @@ class Stats(commands.Cog):
             description=f"**Here is the stats for {ctx.guild.name}, enjoy them:**",
 
         )
-        embed.add_field(name=f"Member Count",value=f"There Are {ctx.guild.member_count} Members In {ctx.guild.name}")
+                
+        humans = 0
+        bots = 0
+        for m in ctx.guild.members:
+          if m.bot:
+             bots += 1
+          else:
+             humans += 1
+                
+        online = 0
+        for m in ctx.guild.members:
+          if m.status == discord.Status.offline:
+             online += 1
+          else:
+             continue
+                
+        embed.add_field(name=f"Member Count",value=f"There Are {ctx.guild.member_count} Members In {ctx.guild.name}, {humans} Of Them Are Humans, {bots} Of Them Are Bots And {ctx.guild.member_count-online} Members Are Online")
         embed.add_field(name="Guild ID",value=f"The ID For {ctx.guild.name} Is `{ctx.guild.id}`")
         embed.add_field(name="Text Channel Count",value=f"There Are {len(ctx.guild.text_channels)} Text Channels In {ctx.guild.name}")
         embed.add_field(name="Voice Channel Count",value=f"There Are {len(ctx.guild.voice_channels)} Voice Channels In {ctx.guild.name}")
