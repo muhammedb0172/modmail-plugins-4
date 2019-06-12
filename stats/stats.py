@@ -47,7 +47,7 @@ class Stats(commands.Cog):
         await ctx.send(embed=embed)
         
    
-    @commands.command(aliases=["server")
+    @commands.command(aliases=["server"])
 
     @checks.has_permissions(PermissionLevel.ADMINISTRATOR)
 
