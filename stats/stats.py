@@ -10,7 +10,7 @@ from core.models import PermissionLevel
 
 class Stats(commands.Cog):
 
-    """Get  Useful Stats Directly In An Embed About Either The ModMail Bot Or The Server."""
+    """Get Useful Stats Directly In An Embed About Either The ModMail Bot Or The Server."""
 
     
 
