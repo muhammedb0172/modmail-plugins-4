@@ -95,12 +95,12 @@ class Stats(commands.Cog):
 
         )
         online = 0
-for m in ctx.guild.members:
-    if m.status == discord.Status.offline:
+        for m in ctx.guild.members:
+        if m.status == discord.Status.offline:
         online += 1
-    else:
+        else:
         continue
-        embed.add_field(name=f"Member Count",value=f"There Are {ctx.guild.member_count} Members In {ctx.guild.name} And {online} Of Them Are Online")
+        embed.add_field(name=f"Member Count",value=f"There Are {ctx.guild.member_count} Members In {ctx.guild.name} And {ctx.guild.member_count-online} Of Them Are Online")
         embed.add_field(name="Guild ID",value=f"The ID For {ctx.guild.name} Is `{ctx.guild.id}`")
         embed.add_field(name=f"Server Owner",value=f"The Owner Of {ctx.guild.name} Is {ctx.guild.owner}")
         embed.add_field(name=f"Server Creation Date And Time",value=f"{ctx.guild.name} Was Created {ctx.guild.created_at:%A %d %B %Y} And The Time Was {ctx.guild.created_at:%H:%M:%S %p}")
