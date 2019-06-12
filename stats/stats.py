@@ -55,7 +55,7 @@ class Stats(commands.Cog):
 
     async def serverstats(self, ctx):
 
-        """Get A Neat Embed With Many Useful Stats About Your Server"""
+        """Get A Cool Embed With Many Useful Stats About Your Server"""
 
         embed = discord.Embed(
 
