@@ -43,7 +43,7 @@ class Stats(commands.Cog):
         embed.add_field(name=f"Bot User Creation Date And Time",value=f"{self.bot.user.name} Was Created {self.bot.user.created_at:%A %d %B %Y} And The Time Was {self.bot.user.created_at:%H:%M:%S %p}")
         embed.add_field(name=f"Important Information",value=f"Remember To :star: The [Repo](https://github.com/kyb3r/modmail) And Become A Patreon [Here](https://patreon.com/kyber)")
         embed.set_thumbnail(url=str(self.bot.user.avatar_url))
-        embed.set_footer(text=f"If You Have Suggestions For More Stats, Please Use The Command `?suggestion` For More Info On How You Do")
+        embed.set_footer(text=f'If You Have Suggestions For More Stats, Please Use The Command "?suggestion" For More Info On How You Do')
         embed.set_author(name=f"{self.bot.user.name} Stats")
 
         await ctx.send(embed=embed)
