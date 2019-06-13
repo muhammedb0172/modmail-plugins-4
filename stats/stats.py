@@ -172,7 +172,7 @@ class Stats(commands.Cog):
         
     @commands.command()
     @checks.has_permissions(PermissionLevel.ADMINISTRATOR)
-    async def user(self, ctx, user: discord.User = None):
+    async def user(self, ctx, user: discord.Member = None):
 
         """Get A Cool Embed With Many Useful Stats About A User"""
 		
@@ -185,18 +185,18 @@ class Stats(commands.Cog):
 
             color=discord.Color.blue(),
 
-            description=f"**Here is the stats for {user.name}, enjoy them:**",
+            description=f"**Here is the stats for {member.name}, enjoy them:**",
 
         )
-        embed.add_field(name=f"User Creation Date And Time",value=f"{user.name} Was Created {user.created_at:%A %d %B %Y} And The Time Was {user.created_at:%H:%M:%S %p}")
-        embed.add_field(name="User ID",value=f"The ID For {user.name} Is `{user.id}`")
+        embed.add_field(name=f"User Creation Date And Time",value=f"{member.name} Was Created {meber.created_at:%A %d %B %Y} And The Time Was {member.created_at:%H:%M:%S %p}")
+        embed.add_field(name="User ID",value=f"The ID For {member.name} Is `{member.id}`")
         embed.add_field(name="Coming Soon",value=f"Coming Soon")
         embed.add_field(name="Coming Soon",value=f"Coming Soon")
         embed.add_field(name="Coming Soon",value=f"Coming Soon")
         embed.add_field(name=f"Important Information",value=f"Remember To :star: The [Repo](https://github.com/kyb3r/modmail) And Become A Patreon [Here](https://patreon.com/kyber)")
-        embed.set_thumbnail(url=str(user.avatar_url))
+        embed.set_thumbnail(url=str(member.avatar_url))
         embed.set_footer(text=f'If You Have Suggestions For More Stats, Please Use The Command "?suggestion" For More Info On How You Do It')
-        embed.set_author(name=f"{user.name}'s Stats")
+        embed.set_author(name=f"{member.name}'s Stats")
 
         await ctx.send(embed=embed)
         
