@@ -188,8 +188,8 @@ class Stats(commands.Cog):
             description=f"**Here is the stats for {user.name}, enjoy them:**",
 
         )
-        embed.add_field(name=f"User Creation Date And Time",value=f"{ctx.user.name} Was Created {ctx.user.created_at:%A %d %B %Y} And The Time Was {ctx.user.created_at:%H:%M:%S %p}")
-        embed.add_field(name="User ID",value=f"The ID For {ctx.user.name} Is `{ctx.user.id}`")
+        embed.add_field(name=f"User Creation Date And Time",value=f"{user.name} Was Created {user.created_at:%A %d %B %Y} And The Time Was {user.created_at:%H:%M:%S %p}")
+        embed.add_field(name="User ID",value=f"The ID For {user.name} Is `{user.id}`")
         embed.add_field(name="Coming Soon",value=f"There Are {len(ctx.guild.text_channels)} Text Channels In {ctx.guild.name}")
         embed.add_field(name="Coming Soon",value=f"There Are {len(ctx.guild.voice_channels)} Voice Channels In {ctx.guild.name}")
         embed.add_field(name="Coming Soon",value=f"There Are {len(ctx.guild.roles)} Roles In {ctx.guild.name}")
