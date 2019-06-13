@@ -176,8 +176,8 @@ class Stats(commands.Cog):
 
         """Get A Cool Embed With Many Useful Stats About A User"""
 		
-        if user is None:
-            user = ctx.author
+        if member is None:
+            member = ctx.author
 
         embed = discord.Embed(
 
