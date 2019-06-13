@@ -188,7 +188,7 @@ class Stats(commands.Cog):
             description=f"**Here is the stats for {member.name}, enjoy them:**",
 
         )
-        embed.add_field(name=f"User Creation Date And Time",value=f"{member.name} Was Created {meber.created_at:%A %d %B %Y} And The Time Was {member.created_at:%H:%M:%S %p}")
+        embed.add_field(name=f"User Creation Date And Time",value=f"{member.name} Was Created {member.created_at:%A %d %B %Y} And The Time Was {member.created_at:%H:%M:%S %p}")
         embed.add_field(name="User ID",value=f"The ID For {member.name} Is `{member.id}`")
         embed.add_field(name="Coming Soon",value=f"Coming Soon")
         embed.add_field(name="Coming Soon",value=f"Coming Soon")
