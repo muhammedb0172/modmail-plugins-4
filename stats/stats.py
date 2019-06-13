@@ -105,7 +105,7 @@ class Stats(commands.Cog):
     @checks.has_permissions(PermissionLevel.ADMINISTRATOR)
     async def all(self, ctx):
 
-        """Sends 2 Embeds, Both {self.bot.prefix}serverstats And `{self.bot.prefix}botstats`"""
+        """Sends Two Embeds, Both The Servers Stats And The Bots Stats"""
 
         embed = discord.Embed(
 
