@@ -194,9 +194,9 @@ class Stats(commands.Cog):
         embed.add_field(name="Coming Soon",value=f"There Are {len(ctx.guild.voice_channels)} Voice Channels In {ctx.guild.name}")
         embed.add_field(name="Coming Soon",value=f"There Are {len(ctx.guild.roles)} Roles In {ctx.guild.name}")
         embed.add_field(name=f"Important Information",value=f"Remember To :star: The [Repo](https://github.com/kyb3r/modmail) And Become A Patreon [Here](https://patreon.com/kyber)")
-        embed.set_thumbnail(url=str(ctx.user.avatar_url))
+        embed.set_thumbnail(url=str(user.avatar_url))
         embed.set_footer(text=f'If You Have Suggestions For More Stats, Please Use The Command "?suggestion" For More Info On How You Do It')
-        embed.set_author(name=f"{ctx.user.name} Stats")
+        embed.set_author(name=f"{user.name}'s Stats")
 
         await ctx.send(embed=embed)
         
