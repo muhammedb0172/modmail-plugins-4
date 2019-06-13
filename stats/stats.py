@@ -73,7 +73,7 @@ class Stats(commands.Cog):
 
         await ctx.send(embed=embed)
         
-    @stats.command(name=bot)
+    @stats.command(name="bot")
     @checks.has_permissions(PermissionLevel.ADMINISTRATOR)
     async def bot(self, ctx):
 
