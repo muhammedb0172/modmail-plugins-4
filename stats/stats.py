@@ -101,7 +101,7 @@ class Stats(commands.Cog):
 
         await ctx.send(embed=embed)
         
-    @stats.command(name=all)
+    @stats.command(name="all")
     @checks.has_permissions(PermissionLevel.ADMINISTRATOR)
     async def all(self, ctx):
 
