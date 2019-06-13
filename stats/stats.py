@@ -190,7 +190,7 @@ class Stats(commands.Cog):
         )
         embed.add_field(name=f"User Creation Date And Time",value=f"{member.name} Was Created {member.created_at:%A %d %B %Y} And The Time Was {member.created_at:%H:%M:%S %p}")
         embed.add_field(name="User ID",value=f"The ID For {member.name} Is `{member.id}`")
-        embed.add_field(name="User Roles",value=f"The Highest Role For {member.name} Is {member.top_role.name}")
+        embed.add_field(name="User Roles",value=f"The Highest Role For {member.name} Is {member.top_roles.name}")
         embed.add_field(name="Member Perms",value=f"Coming Soon")
         embed.add_field(name=f"User Join Date And Time",value=f"{member.name} Joined The Server {member.joined_at:%A %d %B %Y} And The Time Was {member.joined_at:%H:%M:%S %p}")
         embed.add_field(name="User Status",value=f"The Status For {member.name} Is {member.status}")
