@@ -77,7 +77,7 @@ class Stats(commands.Cog):
     @checks.has_permissions(PermissionLevel.ADMINISTRATOR)
     async def bot(self, ctx):
 
-        """Get A Neat Embed With Many Useful Stats About The ModMail Bot."""
+        """Get A Neat Embed With Many Useful Stats About Your ModMail Bot."""
 
         embed = discord.Embed(
 
