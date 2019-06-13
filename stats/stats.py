@@ -170,6 +170,36 @@ class Stats(commands.Cog):
 
         await ctx.send(embed=embed)
         
+    @commands.command()
+    @checks.has_permissions(PermissionLevel.ADMINISTRATOR)
+    async def user(self, ctx, user: discord.user = None):
+
+        """Get A Cool Embed With Many Useful Stats About A User"""
+		
+        if user is None:
+            user = ctx.author
+
+        embed = discord.Embed(
+
+            title=" ",
+
+            color=discord.Color.blue(),
+
+            description=f"**Here is the stats for {user.name}, enjoy them:**",
+
+        )
+        embed.add_field(name=f"User Creation Date And Time",value=f"{ctx.user.name} Was Created {ctx.user.created_at:%A %d %B %Y} And The Time Was {ctx.user.created_at:%H:%M:%S %p}")
+        embed.add_field(name="User ID",value=f"The ID For {ctx.user.name} Is `{ctx.user.id}`")
+        embed.add_field(name="Coming Soon",value=f"There Are {len(ctx.guild.text_channels)} Text Channels In {ctx.guild.name}")
+        embed.add_field(name="Coming Soon",value=f"There Are {len(ctx.guild.voice_channels)} Voice Channels In {ctx.guild.name}")
+        embed.add_field(name="Coming Soon",value=f"There Are {len(ctx.guild.roles)} Roles In {ctx.guild.name}")
+        embed.add_field(name=f"Important Information",value=f"Remember To :star: The [Repo](https://github.com/kyb3r/modmail) And Become A Patreon [Here](https://patreon.com/kyber)")
+        embed.set_thumbnail(url=str(ctx.user.avatar_url))
+        embed.set_footer(text=f'If You Have Suggestions For More Stats, Please Use The Command "?suggestion" For More Info On How You Do It')
+        embed.set_author(name=f"{ctx.user.name} Stats")
+
+        await ctx.send(embed=embed)
+        
 def setup(bot):
 
     bot.add_cog(Stats(bot))
