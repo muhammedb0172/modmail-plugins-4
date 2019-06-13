@@ -191,7 +191,7 @@ class Stats(commands.Cog):
         embed.add_field(name=f"User Creation Date And Time",value=f"{member.name} Was Created {member.created_at:%A %d %B %Y} And The Time Was {member.created_at:%H:%M:%S %p}")
         embed.add_field(name="User ID",value=f"The ID For {member.name} Is `{member.id}`")
         embed.add_field(name="User Roles",value=f"Coming Soon")
-	embed.add_field(name="User Perms",value=f"{member.guild_permissions}")
+	embed.add_field(name="User Perms",value=f"Here is {member.guild_permissions} yeet")
         embed.add_field(name=f"User Join Date And Time",value=f"{member.name} Joined The Server {member.joined_at:%A %d %B %Y} And The Time Was {member.joined_at:%H:%M:%S %p}")
         embed.add_field(name="User Status",value=f"The Status For {member.name} Is {member.status}")
         embed.add_field(name=f"Important Information",value=f"Remember To :star: The [Repo](https://github.com/kyb3r/modmail) And Become A Patreon [Here](https://patreon.com/kyber)")
