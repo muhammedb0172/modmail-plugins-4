@@ -172,7 +172,7 @@ class Stats(commands.Cog):
         
     @commands.command()
     @checks.has_permissions(PermissionLevel.ADMINISTRATOR)
-    async def user(self, ctx, user: discord.user = None):
+    async def user(self, ctx, user: discord.User = None):
 
         """Get A Cool Embed With Many Useful Stats About A User"""
 		
