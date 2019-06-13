@@ -191,7 +191,7 @@ class Stats(commands.Cog):
         embed.add_field(name=f"User Creation Date And Time",value=f"{member.name} Was Created {member.created_at:%A %d %B %Y} And The Time Was {member.created_at:%H:%M:%S %p}")
         embed.add_field(name="User ID",value=f"The ID For {member.name} Is `{member.id}`")
         embed.add_field(name="Member Roles",value=f"{member.name} Has These Roles: {member.roles}")
-        embed.add_field(name="Coming Soon",value=f"Coming Soon")
+        embed.add_field(name=f"User Join Date And Time",value=f"{member.name} Joined The Server {member.joined_at:%A %d %B %Y} And The Time Was {member.joined_at:%H:%M:%S %p}")
         embed.add_field(name="Coming Soon",value=f"Coming Soon")
         embed.add_field(name=f"Important Information",value=f"Remember To :star: The [Repo](https://github.com/kyb3r/modmail) And Become A Patreon [Here](https://patreon.com/kyber)")
         embed.set_thumbnail(url=str(member.avatar_url))
