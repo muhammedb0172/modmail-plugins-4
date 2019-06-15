@@ -35,16 +35,18 @@ class Debug(commands.Cog):
 
         await ctx.send(embed=discord.Embed(
             color=discord.Color.blurple(),
-            description=f"Process Started, Deleting Current Logs"
+            description=f"Process Started, Deleting Cached Logs"
         ))
         
-        await asyncio.sleep(1)
+        await asyncio.sleep(0,5)
         
         await ctx.invoke(self.bot.get_command("debug wipe"))
+        
+        await asyncio.sleep(0,5)
          
         msg = await ctx.send(embed=discord.Embed(
             color=discord.Color.blurple(),
-            description="10 Seconds Back, Do The Command Now"
+            description=f"{timer} Seconds Back, Do The Command Now"
         ))
         
         for i in range(timer):
@@ -60,7 +62,7 @@ class Debug(commands.Cog):
             description=f"Done, Your Hastebin Link Is Coming Now, While You Wait For It, Remeber To :star: The [Repo](https://github.com/kyb3r/modmail) If You Havent Done Already"
         ))
         
-        await asyncio.sleep(5)
+        await asyncio.sleep(3)
         
         await ctx.invoke(self.bot.get_command("debug hastebin"))
 
