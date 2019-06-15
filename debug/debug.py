@@ -42,7 +42,7 @@ class Debug(commands.Cog):
         
         await ctx.invoke(self.bot.get_command("debug wipe"))
         
-        await asyncio.sleep(0,5)
+        await asyncio.sleep(0.3)
          
         msg = await ctx.send(embed=discord.Embed(
             color=discord.Color.blurple(),
