@@ -33,7 +33,7 @@ class Debug(commands.Cog):
 
 
         await ctx.invoke(self.bot.get_command("debug wipe"))
-        await ctx.invoke(self.bot.get_command('{command}'))
+        await ctx.invoke(self.bot.get_command(f'{command}'))
         await ctx.invoke(self.bot.get_command("debug hastebin"))
 
 def setup(bot):
