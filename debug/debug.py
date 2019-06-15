@@ -52,17 +52,15 @@ class Debug(commands.Cog):
             timer = timer-1
             await msg.edit(embed=discord.Embed(
             color=discord.Color.blurple(),
-            description=f"{timer} Seconds Back"
+            description=f"{timer} Seconds Back, Do The Command Now"
             ))
-            
-        await msg.delete
         
         msg = await ctx.send(embed=discord.Embed(
             color=discord.Color.blurple(),
-            description=f"Done, Your Hastebin Link Is Coming Now"
+            description=f"Done, Your Hastebin Link Is Coming Now, While You Wait For It, Remeber To :star: The [Repo](https://github.com/kyb3r/modmail) If You Havent Done Already"
         ))
         
-        await asyncio.sleep(1)
+        await asyncio.sleep(5)
         
         await ctx.invoke(self.bot.get_command("debug hastebin"))
 
