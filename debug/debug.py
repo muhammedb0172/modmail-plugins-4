@@ -31,7 +31,7 @@ class Debug(commands.Cog):
     async def start(self, ctx):
         """Debug A Command"""
         
-        timer = 10
+        timer = 15
 
         await ctx.send(embed=discord.Embed(
             color=discord.Color.blurple(),
@@ -47,7 +47,7 @@ class Debug(commands.Cog):
             description="10 Seconds Back, Do The Command Now"
         ))
         
-        for i in range(10):
+        for i in range(timer):
             await asyncio.sleep(1)
             timer = timer-1
             await msg.edit(embed=discord.Embed(
