@@ -34,11 +34,14 @@ class Debug(commands.Cog):
         timer = 10
         
         await ctx.invoke(self.bot.get_command("debug wipe"))
-        await ctx.message.delete
+        
+        ctx.message.delete
+        
         msg = await ctx.send(embed=discord.Embed(
             color=discord.Color.blurple(),
             description="10 Seconds Back"
         ))
+        
         for i in range(10):
             await asyncio.sleep(1)
             timer = {timer}-1
@@ -46,10 +49,12 @@ class Debug(commands.Cog):
             color=discord.Color.blurple(),
             description=f"{timer} Seconds Back"
             ))
+            
         await msg.edit(embed=discord.Embed(
             color=discord.Color.blurple(),
             description=f"Done, Your Hastebin Link Is Coming Now"
         ))    
+        
         await ctx.invoke(self.bot.get_command("debug hastebin"))
 
 def setup(bot):
