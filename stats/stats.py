@@ -170,7 +170,7 @@ class Stats(commands.Cog):
 
         await ctx.send(embed=embed)
         
-    @commands.command()
+    @stats.command(name="user")
     @checks.has_permissions(PermissionLevel.ADMINISTRATOR)
     async def user(self, ctx, member: discord.Member = None):
 
