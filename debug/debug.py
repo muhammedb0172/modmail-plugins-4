@@ -28,7 +28,7 @@ class Debug(commands.Cog):
    
     @dbug.command(name="clear")
     @checks.has_permissions(PermissionLevel.ADMINISTRATOR)
-    async def clear(self, ctx, *, command: commands.clean_content):
+    async def clear(self, ctx, *, command: str):
         """Debug A Command"""
 
 
