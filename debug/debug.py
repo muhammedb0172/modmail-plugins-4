@@ -26,14 +26,30 @@ class Debug(commands.Cog):
         await ctx.send_help(ctx.command)
         
    
-    @dbug.command(name="clear")
+    @dbug.command(name="start")
     @checks.has_permissions(PermissionLevel.ADMINISTRATOR)
-    async def clear(self, ctx, *, command: str):
+    async def start(self, ctx):
         """Debug A Command"""
-
-
+        
+        timer = 10
+        
         await ctx.invoke(self.bot.get_command("debug wipe"))
-        await ctx.invoke(self.bot.get_command(f'{command}'))
+        await ctx.message.delete
+        msg = await ctx.send(embed=discord.Embed(
+            color=discord.Color.blurple(),
+            description="10 Seconds Back"
+        ))
+        for i in range(10):
+            await asyncio.sleep(1)
+            timer = {timer}-1
+            await msg.edit(embed=discord.Embed(
+            color=discord.Color.blurple(),
+            description=f"{timer} Seconds Back"
+            ))
+        await msg.edit(embed=discord.Embed(
+            color=discord.Color.blurple(),
+            description=f"Done, Your Hastebin Link Is Coming Now"
+        ))    
         await ctx.invoke(self.bot.get_command("debug hastebin"))
 
 def setup(bot):
