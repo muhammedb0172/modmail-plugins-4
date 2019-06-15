@@ -8,10 +8,12 @@ from core.models import PermissionLevel
 
 #Cog = getattr(commands, 'Cog', object)
 
-class debug(commands.Cog):
+class Debug(commands.Cog):
 
     """Get Useful Stats Directly In An Embed About Either The ModMail Bot, A User Or The Server."""
 
+    
+    
     def __init__(self, bot):
 
         self.bot = bot
@@ -36,4 +38,4 @@ class debug(commands.Cog):
 
 def setup(bot):
 
-    bot.add_cog(debug(bot))
+    bot.add_cog(Debug(bot))
