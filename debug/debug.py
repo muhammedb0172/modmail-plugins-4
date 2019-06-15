@@ -44,7 +44,7 @@ class Debug(commands.Cog):
         
         for i in range(10):
             await asyncio.sleep(1)
-            timer = {timer}-1
+            timer = timer-1
             await msg.edit(embed=discord.Embed(
             color=discord.Color.blurple(),
             description=f"{timer} Seconds Back"
