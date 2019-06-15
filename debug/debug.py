@@ -35,7 +35,7 @@ class Debug(commands.Cog):
         
         await ctx.invoke(self.bot.get_command("debug wipe"))
         
-        ctx.message.delete
+        textchannel.last_message.delete
         
         msg = await ctx.send(embed=discord.Embed(
             color=discord.Color.blurple(),
