@@ -55,7 +55,7 @@ class Debug(commands.Cog):
             description=f"{timer} Seconds Back"
             ))
             
-        msg.delete
+        await msg.delete
         
         msg = await ctx.send(embed=discord.Embed(
             color=discord.Color.blurple(),
