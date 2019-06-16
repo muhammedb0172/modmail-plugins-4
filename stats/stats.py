@@ -34,8 +34,6 @@ class Stats(commands.Cog):
 
         embed = discord.Embed(
 
-            title=" ",
-
             color=discord.Color.blue(),
 
             description=f"**Here is the stats for {ctx.guild.name}, enjoy them:**",
@@ -81,8 +79,6 @@ class Stats(commands.Cog):
 
         embed = discord.Embed(
 
-            title=" ",
-
             color=discord.Color.blue(),
 
             description=f"**Here is the stats for {self.bot.user.name}, enjoy them:**",
@@ -122,8 +118,6 @@ class Stats(commands.Cog):
             member = ctx.author
 
         embed = discord.Embed(
-
-            title=" ",
 
             color=discord.Color.blue(),
 
