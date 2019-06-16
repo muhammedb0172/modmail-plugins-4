@@ -10,7 +10,7 @@ from core.models import PermissionLevel
 
 class Debug(commands.Cog):
 
-    """Get Useful Stats Directly In An Embed About Either The ModMail Bot, A User Or The Server."""
+    """Debug One Or More Commands, Useful For Beginners Or People Who Want A Quick Debug Link"""
 
     
     
