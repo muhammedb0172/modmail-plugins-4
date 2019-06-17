@@ -17,7 +17,7 @@ class Gamemembercount(commands.Cog):
   
     @commands.command(name="dbug", invoke_without_command=True)
     @checks.has_permissions(PermissionLevel.ADMINISTRATOR)
-    async def dbug(self, ctx):
+    async def gameactivity(self, ctx):
         """Let your modmail's game activity be changed to Listening to {ctx.guild.member_count} users"""
 
         for i in range(6):
