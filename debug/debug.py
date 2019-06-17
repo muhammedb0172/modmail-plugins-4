@@ -28,52 +28,64 @@ class Debug(commands.Cog):
    
     @dbug.command(name="start")
     @checks.has_permissions(PermissionLevel.ADMINISTRATOR)
-    async def start(self, ctx):
+    async def start(self, ctx, timer = str):
         """Start A Debug Session, Do As The Bot Says, And Then It Will Work Perfectly"""
         
-        timer = 15
+        try:
+            try:
+                amount = int(amount)
+            except Exception:
+                return await ctx.send('Thats Not Valid Time For The Debugging To Last')
+            
+            if amount > 0 and amount < 31:
 
-        await ctx.send(embed=discord.Embed(
-            color=discord.Color.blurple(),
-            description=f"Process Started, Deleting Cached Logs"
-        ))
+                await ctx.send(embed=discord.Embed(
+                    color=discord.Color.blurple(),
+                    description=f"Process Started, Deleting Cached Logs"
+                ))
         
-        await asyncio.sleep(0.5)
+                await asyncio.sleep(0.5)
         
-        await ctx.invoke(self.bot.get_command("debug wipe"))
+                await ctx.invoke(self.bot.get_command("debug wipe"))
         
-        await asyncio.sleep(0.3)
+                await asyncio.sleep(0.3)
         
-        msg = await ctx.send(embed=discord.Embed(
-            color=discord.Color.blurple(),
-            description=f"Timer Starting In 3 Seconds, You Have 15 Seconds To Do The Command That Doesnt Work And Then You Will Get A Debug Link"
-        ))
+                msg = await ctx.send(embed=discord.Embed(
+                    color=discord.Color.blurple(),
+                    description=f"Timer Starting In 3 Seconds, You Have 15 Seconds To Do The Command That Doesnt Work And Then You Will Get A Debug Link"
+                ))
         
-        await asyncio.sleep(3)
+                await asyncio.sleep(3)
          
-        msg = await ctx.send(embed=discord.Embed(
-            color=discord.Color.blurple(),
-            description=f"{timer} Seconds Back, Do The Command Now"
-        ))
+                msg = await ctx.send(embed=discord.Embed(
+                    color=discord.Color.blurple(),
+                    description=f"{timer} Seconds Back, Do The Command Now"
+                ))
         
-        for i in range(timer):
-            for i in range(10):
-                await asyncio.sleep(0.1)
+                for i in range(timer):
+                    for i in range(10):
+                        await asyncio.sleep(0.1)
                 
-            timer = timer-1
-            await msg.edit(embed=discord.Embed(
-            color=discord.Color.blurple(),
-            description=f"{timer} Seconds Back, Do The Command Now"
-            ))
+                    timer = timer-1
+                    await msg.edit(embed=discord.Embed(
+                    color=discord.Color.blurple(),
+                    description=f"{timer} Seconds Back, Do The Command Now"
+                    ))
         
-        msg = await ctx.send(embed=discord.Embed(
-            color=discord.Color.blurple(),
-            description=f"Done, Your Hastebin Link Is Coming Now, While You Wait For It, Remeber To :star: The [Repo](https://github.com/kyb3r/modmail) If You Havent Done Already"
-        ))
+                msg = await ctx.send(embed=discord.Embed(
+                    color=discord.Color.blurple(),
+                    description=f"Done, Your Hastebin Link Is Coming Now, While You Wait For It, Remeber To :star: The [Repo](https://github.com/kyb3r/modmail) If You Havent Done Already"
+                ))
         
-        await asyncio.sleep(3)
+                await asyncio.sleep(3)
         
-        await ctx.invoke(self.bot.get_command("debug hastebin"))
+                await ctx.invoke(self.bot.get_command("debug hastebin"))
+            
+            else:
+                await ctx.send(embed=discord.Embed(
+                    color=discord.Color.blurple(),
+                    description=f"The Number Of Seconds Has To Be Between 1 And 30"
+                ))
 
 def setup(bot):
 
