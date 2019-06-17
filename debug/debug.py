@@ -1,9 +1,7 @@
 import discord
 import asyncio
 from discord.ext import commands
-
 from core import checks
-
 from core.models import PermissionLevel
 
 #Cog = getattr(commands, 'Cog', object)
