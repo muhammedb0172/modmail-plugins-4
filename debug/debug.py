@@ -29,7 +29,7 @@ class Debug(commands.Cog):
     async def start(self, ctx):
         """Start A Debug Session, Do As The Bot Says, And Then It Will Work Perfectly"""
 
-             timer = 15
+        timer = 15
         
                 await ctx.send(embed=discord.Embed(
                     color=discord.Color.blurple(),
