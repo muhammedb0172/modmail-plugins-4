@@ -15,13 +15,13 @@ class Gamemembercount(commands.Cog):
 
         self.bot = bot
   
-    @commands.command(name="dbug", invoke_without_command=True)
+    @commands.command()
     @checks.has_permissions(PermissionLevel.ADMINISTRATOR)
     async def gameactivity(self, ctx):
         """Let your modmail's game activity be changed to Listening to {ctx.guild.member_count} users"""
 
         for i in range(6):
-            await ctx.invoke(self.bot.get_command(f"activity Listening to {ctx.guild.member_count} users"))
+            await ctx.invoke(self.bot.get_command(f"activity watching {ctx.guild.member_count} users"))
             
             await asyncio.sleep(10)
             
