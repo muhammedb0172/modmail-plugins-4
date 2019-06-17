@@ -26,17 +26,11 @@ class Debug(commands.Cog):
    
     @dbug.command(name="start")
     @checks.has_permissions(PermissionLevel.ADMINISTRATOR)
-    async def start(self, ctx, timer = str):
+    async def start(self, ctx):
         """Start A Debug Session, Do As The Bot Says, And Then It Will Work Perfectly"""
-        
-        try:
-            try:
-                amount = int(amount)
-            except Exception:
-                return await ctx.send('Thats Not Valid Time For The Debugging To Last')
-            
-            if amount > 0 and amount < 31:
 
+             timer = 15
+        
                 await ctx.send(embed=discord.Embed(
                     color=discord.Color.blurple(),
                     description=f"Process Started, Deleting Cached Logs"
@@ -78,12 +72,6 @@ class Debug(commands.Cog):
                 await asyncio.sleep(3)
         
                 await ctx.invoke(self.bot.get_command("debug hastebin"))
-            
-            else:
-                await ctx.send(embed=discord.Embed(
-                    color=discord.Color.blurple(),
-                    description=f"The Number Of Seconds Has To Be Between 1 And 30"
-                ))
 
 def setup(bot):
     bot.add_cog(Debug(bot))
