@@ -122,7 +122,7 @@ class Stats(commands.Cog):
 
         )
 	
-	roles = ""
+	 roles = ""
         for r in ctx.author.roles:
             if r.name != "@everyone":
                roles += f"{r.mention} "
