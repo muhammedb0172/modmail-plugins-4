@@ -7,7 +7,7 @@ from core.models import PermissionLevel
 
 class Stats(commands.Cog):
 
-    """Get Useful Stats Directly In An Embed About Either The ModMail Bot, A User Or The Server."""
+    """Get useful stats directly in an embed about either the ModMail bot, a user or the server."""
 
     
 
@@ -18,7 +18,7 @@ class Stats(commands.Cog):
     @commands.group(name="stats", aliases=["stat"], invoke_without_command=True)
     @checks.has_permissions(PermissionLevel.ADMINISTRATOR)
     async def stats(self, ctx):
-        """Get A Cool Embed With A Lot Of Cool Stats About: Your ModMail, Server Or A User"""
+        """Get a cool embed with a lot of cool stats about your ModMail, server or a user"""
 
         await ctx.send_help(ctx.command)
         
@@ -26,14 +26,14 @@ class Stats(commands.Cog):
     @stats.command(name="server")
     @checks.has_permissions(PermissionLevel.ADMINISTRATOR)
     async def server(self, ctx):
-        """Get A Cool Embed With Many Useful Stats About Your Server"""
+        """Get a cool embed with many useful stats about your server"""
 
 
         embed = discord.Embed(
 
             color=discord.Color.blue(),
 
-            description=f"**Here is the stats for {ctx.guild.name}, enjoy them:**",
+            description=f"**Here are the stats for {ctx.guild.name}, enjoy them:**",
 
         )
                 
@@ -52,19 +52,19 @@ class Stats(commands.Cog):
           else:
              continue
                 
-        embed.add_field(name=f"Member Count",value=f"There Are {ctx.guild.member_count} Members In {ctx.guild.name}, {humans} Of Them Are Humans, {bots} Of Them Are Bots And {online} Members Are Online")
-        embed.add_field(name="Guild ID",value=f"The ID For {ctx.guild.name} Is `{ctx.guild.id}`")
-        embed.add_field(name="Text Channel Count",value=f"There Are {len(ctx.guild.text_channels)} Text Channels In {ctx.guild.name}")
-        embed.add_field(name="Voice Channel Count",value=f"There Are {len(ctx.guild.voice_channels)} Voice Channels In {ctx.guild.name}")
-        embed.add_field(name="Role Count",value=f"There Are {len(ctx.guild.roles)} Roles In {ctx.guild.name}")
-        embed.add_field(name="Category Count",value=f"There Are {len(ctx.guild.categories)} Categories In {ctx.guild.name}")
-        embed.add_field(name="Server Region",value=f"The Region Of {ctx.guild.name} Is {ctx.guild.region}")
-        embed.add_field(name=f"Server Owner",value=f"The Owner Of {ctx.guild.name} Is {ctx.guild.owner.mention}")
-        embed.add_field(name=f"Server Creation Date And Time",value=f"{ctx.guild.name} Was Created {ctx.guild.created_at:%A %d %B %Y} And The Time Was {ctx.guild.created_at:%H:%M:%S %p}")
-        embed.add_field(name=f"Important Information",value=f"Remember To :star: The [Repo](https://github.com/kyb3r/modmail) And Become A Patreon [Here](https://patreon.com/kyber)")
+        embed.add_field(name=f"Member Count",value=f"There are {ctx.guild.member_count} members in {ctx.guild.name}, {humans} of them are humans, {bots} of them are bots and {online} members are online")
+        embed.add_field(name="Guild ID",value=f"The ID for {ctx.guild.name} is `{ctx.guild.id}`")
+        embed.add_field(name="Text Channel Count",value=f"There are {len(ctx.guild.text_channels)} text channels in {ctx.guild.name}")
+        embed.add_field(name="Voice Channel Count",value=f"There are {len(ctx.guild.voice_channels)} voice channels in {ctx.guild.name}")
+        embed.add_field(name="Role Count",value=f"There are {len(ctx.guild.roles)} roles in {ctx.guild.name}")
+        embed.add_field(name="Category Count",value=f"There are {len(ctx.guild.categories)} categories in {ctx.guild.name}")
+        embed.add_field(name="Server Region",value=f"The region of {ctx.guild.name} is {ctx.guild.region}")
+        embed.add_field(name=f"Server Owner",value=f"The owner of {ctx.guild.name} is {ctx.guild.owner.mention}")
+        embed.add_field(name=f"Server Creation Date And Time",value=f"{ctx.guild.name} was created {ctx.guild.created_at:%A %d %B %Y} and the time was {ctx.guild.created_at:%H:%M:%S %p}")
+        embed.add_field(name=f"Important Information",value=f"Remember to :star: the [repo](https://github.com/kyb3r/modmail) and become a patreon [here](https://patreon.com/kyber)")
         embed.set_thumbnail(url=str(ctx.guild.icon_url))
-        embed.set_footer(text=f'If You Have Suggestions For More Stats, Please Use The Command "?suggestion" For More Info On How You Do It')
-        embed.set_author(name=f"{ctx.guild.name} Stats")
+        embed.set_footer(text=f'If you have suggestions for more stats, please use the command "?stat info" for more info on how you do it')
+        embed.set_author(name=f"{ctx.guild.name} stats")
 
         await ctx.send(embed=embed)
         
