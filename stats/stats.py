@@ -62,7 +62,7 @@ class Stats(commands.Cog):
         embed.add_field(name=f"Server Owner",value=f"{ctx.guild.owner.mention}")
         embed.add_field(name=f"Created",value=f"{ctx.guild.created_at:%a, %b %d, %Y %X}")
         embed.set_thumbnail(url=str(ctx.guild.icon_url))
-        embed.set_footer(text=f'If you have suggestions for more stats, please use the command "?stat info" for more info on how you do it')
+        embed.set_footer(text=f'If you have suggestions for more stats, please use the command "?stat info" for more info on how you do it (COMING SOON)')
         embed.set_author(name=f"{ctx.guild.name} stats")
 
         await ctx.send(embed=embed)
@@ -87,7 +87,7 @@ class Stats(commands.Cog):
         embed.add_field(name="Bot Uptime",value=f"The Uptime For {self.bot.user.name} Is {self.bot.uptime}")
         embed.add_field(name=f"Bot User Creation Date And Time",value=f"{self.bot.user.name} Was Created {self.bot.user.created_at:%A %d %B %Y} And The Time Was {self.bot.user.created_at:%H:%M:%S %p}")
         embed.set_thumbnail(url=str(self.bot.user.avatar_url))
-        embed.set_footer(text=f'If You Have Suggestions For More Stats, Please Use The Command "?suggestion" For More Info On How You Do It')
+        embed.set_footer(text=f'If you have suggestions for more stats, please use the command "?stat info" for more info on how you do it (COMING SOON)')
         embed.set_author(name=f"{self.bot.user.name} Stats")
 
         await ctx.send(embed=embed)
@@ -131,7 +131,7 @@ class Stats(commands.Cog):
         embed.add_field(name=f"User Join Date And Time",value=f"{member.name} Joined The Server {member.joined_at:%A %d %B %Y} And The Time Was {member.joined_at:%H:%M:%S %p}")
         embed.add_field(name="User Status",value=f"The Status For {member.name} Is {member.status}")
         embed.set_thumbnail(url=str(member.avatar_url))
-        embed.set_footer(text=f'If You Have Suggestions For More Stats, Please Use The Command "?suggestion" For More Info On How You Do It')
+        embed.set_footer(text=f'If you have suggestions for more stats, please use the command "?stat info" for more info on how you do it (COMING SOON)')
         embed.set_author(name=f"{member.name}'s Stats")
 
         await ctx.send(embed=embed)
