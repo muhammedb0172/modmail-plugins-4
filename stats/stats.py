@@ -71,7 +71,7 @@ class Stats(commands.Cog):
     @checks.has_permissions(PermissionLevel.ADMINISTRATOR)
     async def bot(self, ctx):
 
-        """Get A Neat Embed With Many Useful Stats About Your ModMail Bot."""
+        """Get a neat embed with many useful stats about your ModMail bot"""
 
         embed = discord.Embed(
 
@@ -80,15 +80,15 @@ class Stats(commands.Cog):
             description=f"**Here is the stats for {self.bot.user.name}, enjoy them:**",
 
         )
-        embed.add_field(name=f"Invite Link For {self.bot.user.name}",value=f"[Here](https://discordapp.com/api/oauth2/authorize?client_id={self.bot.user.id}&permissions=268443792&scope=bot) Is The Invite Link For {self.bot.user.name}.")
-        embed.add_field(name="Bot User ID",value=f"`{self.bot.user.id}` Is The User ID For {self.bot.user.name}")
-        embed.add_field(name=f"Bot Prefix",value=f"The Prefix For {self.bot.user.name} Is `{self.bot.prefix}` Or {self.bot.user.mention}")
-        embed.add_field(name=f"Latency",value=f"The Latency For {self.bot.user.name} Is {self.bot.latency * 1000:.2f} MilliSeconds / {self.bot.latency:.3f} Seconds")
-        embed.add_field(name="Bot Uptime",value=f"The Uptime For {self.bot.user.name} Is {self.bot.uptime}")
-        embed.add_field(name=f"Bot User Creation Date And Time",value=f"{self.bot.user.name} Was Created {self.bot.user.created_at:%A %d %B %Y} And The Time Was {self.bot.user.created_at:%H:%M:%S %p}")
+        embed.add_field(name=f"Invite link for {self.bot.user.name}",value=f"[Invite Your Bot](https://discordapp.com/api/oauth2/authorize?client_id={self.bot.user.id}&permissions=268443792&scope=bot)")
+        embed.add_field(name="Bot User ID",value=f"`{self.bot.user.id}`")
+        embed.add_field(name=f"Bot Prefix",value=f"`{self.bot.prefix}` or {self.bot.user.mention}")
+        embed.add_field(name=f"Latency",value=f"{self.bot.latency * 1000:.2f} MilliSeconds / {self.bot.latency:.3f} Seconds")
+        embed.add_field(name="Bot Uptime",value=f"{self.bot.uptime}")
+        embed.add_field(name=f"Bot Created",value=f"{self.bot.user.created_at:%a, %b %d, %Y %X}")
         embed.set_thumbnail(url=str(self.bot.user.avatar_url))
         embed.set_footer(text=f'If you have suggestions for more stats, please use the command "?stat info" for more info on how you do it (COMING SOON)')
-        embed.set_author(name=f"{self.bot.user.name} Stats")
+        embed.set_author(name=f"{self.bot.user.name} stats")
 
         await ctx.send(embed=embed)
         
