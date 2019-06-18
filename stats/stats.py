@@ -128,11 +128,11 @@ class Stats(commands.Cog):
             if r.name != "@everyone":
                roles += f"{r.mention} "
 
-        embed.add_field(name=f"User Creation Date And Time",value=f"{member.name} Was Created {member.created_at:%A %d %B %Y} And The Time Was {member.created_at:%H:%M:%S %p}")
-        embed.add_field(name="User ID",value=f"The ID For {member.name} Is `{member.id}`")
-        embed.add_field(name="User Roles",value=f"{member.name} has these roles: {roles}")
-        embed.add_field(name=f"User Join Date And Time",value=f"{member.name} Joined The Server {member.joined_at:%A %d %B %Y} And The Time Was {member.joined_at:%H:%M:%S %p}")
-        embed.add_field(name="User Status",value=f"The Status For {member.name} Is {member.status}")
+        embed.add_field(name=f"User Created",value=f"{member.created_at:%a, %b %d, %Y %X}")
+        embed.add_field(name="User ID",value=f"`{member.id}`")
+        embed.add_field(name="User Roles",value=f"{roles}")
+        embed.add_field(name=f"User Joined",value=f"{member.joined_at:%a, %b %d, %Y %X}")
+        embed.add_field(name="User Status",value=f"{member.status}")
         embed.set_thumbnail(url=str(member.avatar_url))
         embed.set_footer(text=f'If you have suggestions for more stats, please use the command "?stat info" for more info on how you do it (COMING SOON)')
         embed.set_author(name=f"{member.name}'s Stats")
