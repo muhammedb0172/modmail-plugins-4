@@ -73,7 +73,7 @@ class Stats(commands.Cog):
 
         """Get a neat embed with many useful stats about your ModMail bot"""
 	
-	member = f"{self.bot.user.id}"
+        member = f"{self.bot.user.id}"
 
         embed = discord.Embed(
 
