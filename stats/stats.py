@@ -135,7 +135,7 @@ class Stats(commands.Cog):
         embed.add_field(name="User Status",value=f"{member.status}")
         embed.set_thumbnail(url=str(member.avatar_url))
         embed.set_footer(text=f'If you have suggestions for more stats, please use the command "?stat info" for more info on how you do it (COMING SOON)')
-        embed.set_author(name=f"{member.name}'s Stats")
+        embed.set_author(name=f"{member.name}'s stats")
 
         await ctx.send(embed=embed)
         
