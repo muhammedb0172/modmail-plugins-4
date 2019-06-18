@@ -52,15 +52,15 @@ class Stats(commands.Cog):
           else:
              continue
                 
-        embed.add_field(name=f"Member Count",value=f"{ctx.guild.member_count} {humans} are humans and {bots} are bots, {online} are online")
+        embed.add_field(name=f"Member Count",value=f"{ctx.guild.member_count}, {humans} are humans and {bots} are bots, {online} are online")
         embed.add_field(name="Guild ID",value=f"{ctx.guild.id}")
         embed.add_field(name="Category Count",value=f"{len(ctx.guild.categories)}")
         embed.add_field(name="Text Channel Count",value=f"{len(ctx.guild.text_channels)}")
         embed.add_field(name="Voice Channel Count",value=f"{len(ctx.guild.voice_channels)}")
-        embed.add_field(name="Category Count",value=f"{len(ctx.guild.roles)}")
+        embed.add_field(name="Role Count",value=f"{len(ctx.guild.roles)}")
         embed.add_field(name="Server Region",value=f"{ctx.guild.region}")
         embed.add_field(name=f"Server Owner",value=f"{ctx.guild.owner.mention}")
-        embed.add_field(name=f"Server Creation Date And Time",value=f"{ctx.guild.created_at:%a, %b %d, %Y %X %p}")
+        embed.add_field(name=f"Server Creation Date And Time",value=f"{ctx.guild.created_at:%a, %b %d, %Y %X}")
         embed.add_field(name=f"Important Information",value=f"Remember to :star: the [repo](https://github.com/kyb3r/modmail) and become a patreon [here](https://patreon.com/kyber)")
         embed.set_thumbnail(url=str(ctx.guild.icon_url))
         embed.set_footer(text=f'If you have suggestions for more stats, please use the command "?stat info" for more info on how you do it')
