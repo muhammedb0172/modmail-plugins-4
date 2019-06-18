@@ -72,20 +72,23 @@ class Stats(commands.Cog):
     async def bot(self, ctx):
 
         """Get a neat embed with many useful stats about your ModMail bot"""
+	
+	member = f"{self.bot.user.id}"
 
         embed = discord.Embed(
 
             color=discord.Color.blue(),
 
-            description=f"**Here is the stats for {self.bot.user.name}, enjoy them:**",
+            description=f"**Here are the stats for {self.bot.user.name}, enjoy them:**",
 
         )
-        embed.add_field(name=f"Invite link for {self.bot.user.name}",value=f"[Invite Your Bot](https://discordapp.com/api/oauth2/authorize?client_id={self.bot.user.id}&permissions=268443792&scope=bot)")
+        embed.add_field(name=f"Invite Link For {self.bot.user.name}",value=f"[Invite your bot](https://discordapp.com/api/oauth2/authorize?client_id={self.bot.user.id}&permissions=268443792&scope=bot)")
         embed.add_field(name="Bot User ID",value=f"`{self.bot.user.id}`")
         embed.add_field(name=f"Bot Prefix",value=f"`{self.bot.prefix}` or {self.bot.user.mention}")
         embed.add_field(name=f"Latency",value=f"{self.bot.latency * 1000:.2f} MilliSeconds / {self.bot.latency:.3f} Seconds")
         embed.add_field(name="Bot Uptime",value=f"{self.bot.uptime}")
         embed.add_field(name=f"Bot Created",value=f"{self.bot.user.created_at:%a, %b %d, %Y %X}")
+        embed.add_field(name=f"Bot Join Date",value=f"{member.joined_at:%a, %b %d, %Y %X}")
         embed.set_thumbnail(url=str(self.bot.user.avatar_url))
         embed.set_footer(text=f'If you have suggestions for more stats, please use the command "?stat info" for more info on how you do it (COMING SOON)')
         embed.set_author(name=f"{self.bot.user.name} stats")
@@ -116,7 +119,7 @@ class Stats(commands.Cog):
 
             color=discord.Color.blue(),
 
-            description=f"**Here is the stats for {member.name}, enjoy them:**",
+            description=f"**Here are the stats for {member.name}, enjoy them:**",
 
         )
 	
