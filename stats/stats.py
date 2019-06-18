@@ -73,7 +73,7 @@ class Stats(commands.Cog):
 
         """Get a neat embed with many useful stats about your ModMail bot"""
 	
-        member = f"{self.bot.user.id}"
+        #member = f"{self.bot.user.id}"
 
         embed = discord.Embed(
 
@@ -88,7 +88,7 @@ class Stats(commands.Cog):
         embed.add_field(name=f"Latency",value=f"{self.bot.latency * 1000:.2f} MilliSeconds / {self.bot.latency:.3f} Seconds")
         embed.add_field(name="Bot Uptime",value=f"{self.bot.uptime}")
         embed.add_field(name=f"Bot Created",value=f"{self.bot.user.created_at:%a, %b %d, %Y %X}")
-        embed.add_field(name=f"Bot Join Date",value=f"{member.joined_at:%a, %b %d, %Y %X}")
+        #embed.add_field(name=f"Bot Join Date",value=f"{member.joined_at:%a, %b %d, %Y %X}")
         embed.set_thumbnail(url=str(self.bot.user.avatar_url))
         embed.set_footer(text=f'If you have suggestions for more stats, please use the command "?stat info" for more info on how you do it (COMING SOON)')
         embed.set_author(name=f"{self.bot.user.name} stats")
